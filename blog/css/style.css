@@ -52,14 +52,14 @@
 
 @font-face {
     font-family: "ultra";
-    src: url('../fonts/serif/ultra-regular.ttf');
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/sans-serif/roboto-regular.ttf'); format('truetype');
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -125,16 +125,19 @@ nav {
     margin-top: 3rem;
 }
 
+
 .main-section {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-gap: 1rem;
+    
 }
 
-article{
+article {
     grid-column: 1 / 2;
     grid-row: 1;
-    
+
+
 }
 
 aside {
@@ -145,8 +148,8 @@ aside {
     
 }
 
-.expand {font-size: .5rem; 
-    letter-spacing: -1px; 
+.expand {font-size: .275rem; 
+    letter-spacing: -0.75px; 
     display: block; 
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -192,37 +195,46 @@ figure {
 
 }
 
+
 .article-image {
     width: 33%;
     float: left;
     margin-right: 1rem;
-    padding-bottom: 1rem;
-
-
+    padding-bottom: 0.175rem;
+    
 }
+
+figcaption .attribution {
+    float: left;
+    clear: both;
+    margin: 0rem 1.5rem;
+    padding: 0rem 0rem;
+   
+}
+
 
 .subsection {
     margin: 1rem 0rem;
 }
 
 .subsection figure {
-    margin: 0rem 0.25rem;
+    margin: 1.5rem 0.25rem;
+    max-width: 100%;
+    max-height: 100%;
     background-color: #F2E4C9;
+}
+
+.subsection figure img {
+
+    max-width: 1000px;
+    max-height: 800px;
 }
 
 .subsection figure figcaption {
     padding: 0.5rem 0.5rem;
+
 }
 
-figcaption {
-    padding-top: 0.5rem;
-    text-align: left;
-    
-}
-
-figcaption img {
-    float: left;
-}
 
 
 /* LINKS AND NAVIGATION */
@@ -257,5 +269,18 @@ nav a:active {
 /* Footer Styles */
 
 footer {
+    position: relative;
+    font-size: smaller;
+}
+
+.copyright {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.attribution {
     text-align: right;
+
 }
